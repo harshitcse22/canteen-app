@@ -71,7 +71,7 @@ export default function CanteenOrderModal() {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-gray-900/60 backdrop-blur-sm transition-opacity" 
+        className="absolute inset-0 bg-orange-500/60 backdrop-blur-sm transition-opacity" 
         onClick={closeModal}
       ></div>
       
@@ -96,8 +96,8 @@ export default function CanteenOrderModal() {
             </label>
             <select
               id="studentId"
-              className={`w-full px-4 py-3 bg-gray-50 border rounded-xl outline-none transition-all focus:ring-4 ${
-                errors.studentId ? 'border-red-400 focus:ring-red-100' : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-50'
+              className={`w-full px-4 py-3 bg-gray-50 border text-gray-900 font-medium rounded-xl outline-none transition-all focus:ring-4 ${
+                errors.studentId ? 'border-red-400 focus:ring-red-100' : 'border-gray-200 focus:border-orange-500 focus:ring-orange-50'
               }`}
               {...register('studentId')}
             >
@@ -133,8 +133,8 @@ export default function CanteenOrderModal() {
               type="number"
               min="1"
               max="5"
-              className={`w-full px-4 py-3 bg-gray-50 border rounded-xl outline-none transition-all focus:ring-4 ${
-                errors.quantity ? 'border-red-400 focus:ring-red-100' : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-50'
+              className={`w-full px-4 py-3 bg-gray-50 border text-gray-900 font-medium rounded-xl outline-none transition-all focus:ring-4 ${
+                errors.quantity ? 'border-red-400 focus:ring-red-100' : 'border-gray-200 focus:border-orange-500 focus:ring-orange-50'
               }`}
               {...register('quantity', { valueAsNumber: true })}
             />
@@ -148,7 +148,7 @@ export default function CanteenOrderModal() {
 
           <div className="pt-4 flex flex-col gap-3">
             {mutation.isSuccess ? (
-              <div className="w-full bg-emerald-500 text-white font-semibold py-3 px-4 rounded-xl shadow-md shadow-emerald-200 flex justify-center items-center overflow-hidden">
+              <div className="w-full bg-green-500 text-white font-semibold py-3 px-4 rounded-xl shadow-md shadow-green-200 flex justify-center items-center overflow-hidden">
                 <svg className="w-5 h-5 mr-2 animate-bounce flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
                 Order Confirmed!
               </div>
@@ -156,7 +156,7 @@ export default function CanteenOrderModal() {
               <button
                 type="submit"
                 disabled={mutation.isPending}
-                className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-semibold py-3 px-4 rounded-xl transition-all shadow-md shadow-indigo-200 flex justify-center items-center"
+                className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white font-semibold py-3 px-4 rounded-xl transition-all shadow-md shadow-orange-200 flex justify-center items-center"
               >
                 {mutation.isPending ? 'Processing Order...' : 'Confirm Order'}
               </button>

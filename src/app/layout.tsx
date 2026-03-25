@@ -36,12 +36,12 @@ export default function RootLayout({
           <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
             <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
               <div className="flex items-center justify-between w-full sm:justify-start sm:w-auto gap-6 sm:gap-10">
-                <Link href="/" className="text-xl font-bold bg-gradient-to-r from-indigo-600 to-violet-600 bg-clip-text text-transparent shrink-0">
+                <Link href="/" className="text-xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent shrink-0">
                   CanteenApp
                 </Link>
                 <nav className="flex gap-4 sm:gap-6 overflow-x-auto text-sm sm:text-base">
-                  <Link href="/snacks" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors whitespace-nowrap">Snacks</Link>
-                  <Link href="/students" className="text-gray-600 hover:text-indigo-600 font-medium transition-colors whitespace-nowrap">Students</Link>
+                  <Link href="/snacks" className="text-gray-600 hover:text-orange-600 font-medium transition-colors whitespace-nowrap">Snacks</Link>
+                  <Link href="/students" className="text-gray-600 hover:text-orange-600 font-medium transition-colors whitespace-nowrap">Students</Link>
                 </nav>
               </div>
             </div>

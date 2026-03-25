@@ -14,7 +14,7 @@ type FormValues = z.infer<typeof schema>;
 
 export default function CreateStudentForm() {
   const queryClient = useQueryClient();
-  
+
   const { register, handleSubmit, reset, formState: { errors } } = useForm<FormValues>({
     resolver: zodResolver(schema),
   });
@@ -42,9 +42,8 @@ export default function CreateStudentForm() {
           <input
             id="name"
             type="text"
-            className={`w-full px-4 py-2 border rounded-xl focus:ring-4 outline-none transition-all ${
-              errors.name ? 'border-red-500 focus:ring-red-100' : 'border-gray-200 focus:border-indigo-500 focus:ring-indigo-50'
-            }`}
+            className={`w-full px-4 py-2 border rounded-xl focus:ring-4 outline-none transition-all ${errors.name ? 'border-red-500 focus:ring-red-100' : 'border-gray-200 focus:border-orange-500 focus:ring-orange-50'
+              }`}
             placeholder="e.g. John Doe"
             {...register('name')}
           />
@@ -52,11 +51,11 @@ export default function CreateStudentForm() {
             <p className="mt-1.5 text-sm text-red-500 font-medium">{errors.name.message}</p>
           )}
         </div>
-        
+
         <button
           type="submit"
           disabled={mutation.isPending}
-          className="w-full bg-indigo-600 hover:bg-indigo-700 disabled:bg-indigo-400 text-white font-medium py-2 px-4 rounded-xl transition-colors flex justify-center items-center"
+          className="w-full bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white font-medium py-2 px-4 rounded-xl transition-colors flex justify-center items-center"
         >
           {mutation.isPending ? 'Adding...' : 'Add Student'}
         </button>
